@@ -1,0 +1,10 @@
+# RK3576 开发板运行依赖
+soundfile
+numpy
+scipy
+
+# torch CPU 版本 (用于音频预处理)
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# rknn-toolkit-lite2 需要单独安装
+# pip install rknn_toolkit_lite2-*.whl

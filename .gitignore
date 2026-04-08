@@ -1,0 +1,9 @@
+minicpm4-rk3576/MiniCPM4-0.5B/model.safetensors
+deepseek-ocr-rk3576/3rdparty/librknnrt/Linux/librknn_api/aarch64/librknnrt.so
+deepseek-ocr-rk3576/3rdparty/opencv/opencv-linux-aarch64/lib/libopencv_dnn.a
+zipformer-rk3576/**/*.onnx
+zipformer-rk3576/**/*.rknn
+ppocr-rk3576/Miniconda3-*.sh
+# Auto-added: files over 100MB
+mms_tts-rk3576/vits-mms-eng.tar.bz2
+zipformer-rk3576/model/encoder-epoch-99-avg-1.rknn
