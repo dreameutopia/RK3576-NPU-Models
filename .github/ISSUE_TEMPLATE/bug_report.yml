@@ -1,0 +1,121 @@
+name: Bug Report / Bug 报告
+description: Report a bug to help us improve / 报告一个 Bug 帮助我们改进
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Thank you for taking the time to report a bug! Please fill out the information below to help us investigate.
+
+        > 感谢您花时间报告 Bug！请填写以下信息以帮助我们调查。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description / Bug 描述
+      description: A clear and concise description of the bug. / 请清晰简洁地描述 Bug。
+      placeholder: Describe what happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce / 复现步骤
+      description: How can we reproduce the issue? / 如何复现这个问题？
+      placeholder: |
+        1. Go to '...'
+        2. Run command '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior / 期望行为
+      description: What did you expect to happen? / 您期望的结果是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior / 实际行为
+      description: What actually happened? / 实际发生了什么？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: model
+    attributes:
+      label: Affected Model / 受影响的模型
+      description: Which model directory is affected? / 哪个模型目录受到影响？
+      options:
+        - ppocr-rk3576
+        - deepseek-ocr-rk3576
+        - qwen3-vl-rk3576
+        - lite_transformer-rk3576
+        - mms_tts-rk3576
+        - zipformer-rk3576
+        - whisper-rk3576
+        - Other / 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: board
+    attributes:
+      label: Board / 开发板
+      description: Which board are you using? / 您使用的是哪款开发板？
+      options:
+        - Radxa Rock 4D (RK3576)
+        - Other RK3576 board / 其他 RK3576 开发板
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS Version / 操作系统版本
+      description: "e.g., Debian 12, Ubuntu 22.04"
+      placeholder: Debian 12 aarch64
+    validations:
+      required: false
+
+  - type: input
+    id: rknn-version
+    attributes:
+      label: RKNN Toolkit2 Version
+      description: "e.g., 2.3.0, 2.3.2"
+      placeholder: 2.3.2
+    validations:
+      required: false
+
+  - type: input
+    id: conda-env
+    attributes:
+      label: Conda Environment / Conda 环境
+      description: "Your conda environment name and Python version"
+      placeholder: rknn3 (Python 3.10)
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Output / 日志输出
+      description: Paste any relevant log output here. / 粘贴相关的日志输出。
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context / 补充信息
+      description: Any other relevant information. / 其他相关信息。
+    validations:
+      required: false

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/dreameutopia/RK3576-NPU-Models/discussions
+    about: Ask questions, share ideas, and discuss RK3576 NPU deployment
+  - name: 📖 Documentation
+    url: https://github.com/dreameutopia/RK3576-NPU-Models#-documentation
+    about: Read model-specific deployment guides

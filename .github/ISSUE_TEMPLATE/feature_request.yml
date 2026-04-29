@@ -1,0 +1,78 @@
+name: Feature Request / 功能建议
+description: Suggest an improvement or new feature / 提出改进建议或新功能
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Feature Request
+        Thank you for suggesting a feature! Please describe your idea in detail.
+
+        > 感谢您提出功能建议！请详细描述您的想法。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement / 问题描述
+      description: What problem does this feature solve? / 这个功能要解决什么问题？
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution / 建议方案
+      description: How should this feature work? / 这个功能应该如何工作？
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered / 备选方案
+      description: Any alternative solutions you've considered? / 您考虑过哪些替代方案？
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Affected Scope / 影响范围
+      description: Which part of the project does this affect? / 这会影响项目的哪个部分？
+      multiple: true
+      options:
+        - ppocr-rk3576
+        - deepseek-ocr-rk3576
+        - qwen3-vl-rk3576
+        - lite_transformer-rk3576
+        - mms_tts-rk3576
+        - zipformer-rk3576
+        - whisper-rk3576
+        - Build system / 构建系统
+        - Documentation / 文档
+        - Scripts / 脚本
+        - Other / 其他
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority / 优先级
+      description: How important is this feature to you? / 这个功能对您有多重要？
+      options:
+        - Nice to have / 锦上添花
+        - Important / 重要
+        - Critical / 关键
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context / 补充信息
+      description: Any other context, screenshots, or references. / 其他上下文、截图或参考。
+    validations:
+      required: false

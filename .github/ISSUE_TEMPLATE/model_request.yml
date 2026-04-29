@@ -1,0 +1,106 @@
+name: Model Request / 模型请求
+description: Request a new AI model to be deployed on RK3576 / 请求在 RK3576 上部署新模型
+title: "[Model]: "
+labels: ["model-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧠 Model Request
+        Want to see a new model running on RK3576 NPU? Tell us about it!
+
+        > 希望在 RK3576 NPU 上运行新模型？告诉我们吧！
+
+  - type: input
+    id: model-name
+    attributes:
+      label: Model Name / 模型名称
+      description: "e.g., YOLOv8, Stable Diffusion, MiniCPM"
+      placeholder: Model name
+    validations:
+      required: true
+
+  - type: input
+    id: model-link
+    attributes:
+      label: Model Link / 模型链接
+      description: Link to the original model repo, paper, or HuggingFace page. / 原始模型仓库、论文或 HuggingFace 页面链接。
+      placeholder: "https://github.com/..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / 模型类别
+      description: What type of model is this? / 这是什么类型的模型？
+      options:
+        - OCR
+        - Multimodal / 多模态
+        - NLP / 自然语言处理
+        - ASR / 语音识别
+        - TTS / 语音合成
+        - CV / 计算机视觉
+        - Object Detection / 目标检测
+        - Image Segmentation / 图像分割
+        - LLM / 大语言模型
+        - Other / 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Model Description / 模型描述
+      description: Brief description of what the model does. / 简要描述模型的功能。
+      placeholder: This model performs...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case / 使用场景
+      description: What is your use case for this model on RK3576? / 您在 RK3576 上使用这个模型的场景是什么？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: model-size
+    attributes:
+      label: Model Size / 模型大小
+      description: Approximate model size. / 大致模型大小。
+      options:
+        - Small (< 100MB)
+        - Medium (100MB - 500MB)
+        - Large (500MB - 2GB)
+        - Very Large (> 2GB)
+        - Unknown / 不确定
+    validations:
+      required: false
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Model Format / 模型格式
+      description: Available model formats. / 可用的模型格式。
+      multiple: true
+      options:
+        - ONNX
+        - PyTorch (.pt / .pth)
+        - TensorFlow (.tflite)
+        - SafeTensors
+        - PaddlePaddle
+        - RKNN (already converted)
+        - Other / 其他
+        - Unknown / 不确定
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context / 补充信息
+      description: Any other information about the model, known RKNN compatibility issues, etc. / 关于模型的其他信息，已知的 RKNN 兼容性问题等。
+    validations:
+      required: false
